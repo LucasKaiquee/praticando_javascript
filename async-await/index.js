@@ -28,10 +28,15 @@ const prepararBancoDeDados = () =>  {
 
 // iniciando com Async e Await
 const iniciarEPrepararBancoDeDados = async() => {
-    const mensagemDeInicio = await iniciarBancoDeDados("12345");
-    console.log(mensagemDeInicio);
-    const mensagemBancoDeDadosPreparado = await prepararBancoDeDados();
-    console.log(mensagemBancoDeDadosPreparado);
+    try{
+        const mensagemDeInicio = await iniciarBancoDeDados("12345");
+        console.log(mensagemDeInicio);
+        const mensagemBancoDeDadosPreparado = await prepararBancoDeDados();
+        console.log(mensagemBancoDeDadosPreparado);  
+    } catch (error) {
+        console.log(error)
+    }
+    
 }
 
 iniciarEPrepararBancoDeDados();
