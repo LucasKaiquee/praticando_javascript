@@ -36,7 +36,6 @@ const iniciarEPrepararBancoDeDados = async() => {
     } catch (error) {
         console.log(error)
     }
-    
 }
 
 iniciarEPrepararBancoDeDados();
